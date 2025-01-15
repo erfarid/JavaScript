@@ -33,8 +33,12 @@ const table  = document.querySelector("#table_update");
 const controller =document.querySelector("#controls")
 
 generateButton.addEventListener("click", () => {
+  if (cell.classList.contains("correct")) {
+    return; // Prevent any further changes
+   }
   const rows = parseInt(rowslider.value);
   const cols = parseInt(columslider.value);
+  
 
   
   table.innerHTML = "";
